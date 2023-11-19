@@ -4,7 +4,7 @@ import { Alert, Box, Button, Snackbar, TextField } from "@mui/material";
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [hasError,setHasError] = useState(false);
+  const [hasError, setHasError] = useState(false);
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -17,16 +17,25 @@ function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (!username || !password) {
-        setHasError(true);
+      setHasError(true);
     }
     console.log(`Username: ${username}, Password: ${password}`);
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <Snackbar open={hasError} anchorOrigin={{vertical:'top',horizontal:'center'}} autoHideDuration={6000} onClose={() => setHasError(false)}>
-        <Alert onClose={() => setHasError(false)} severity="error" sx={{ width: "100%" }}>
-            Por favor preencha o nome de usuário e senha.
+      <Snackbar
+        open={hasError}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        autoHideDuration={6000}
+        onClose={() => setHasError(false)}
+      >
+        <Alert
+          onClose={() => setHasError(false)}
+          severity="error"
+          sx={{ width: "100%" }}
+        >
+          Por favor preencha o nome de usuário e senha.
         </Alert>
       </Snackbar>
       <Card sx={{ width: "25rem", boxShadow: "3px 3px 6px #00000029" }}>
@@ -53,6 +62,7 @@ function Login() {
             onChange={handlePasswordChange}
             id="password"
             label="Senha"
+            type="password"
             variant="outlined"
           />
           <Box
