@@ -1,8 +1,9 @@
 export interface UserPayload {
-  id: number;
+  matricula: number;
   email: string;
   nome: string;
   iat?: number;
   exp?: number;
   type?: number;
+  pessoa_tipo: number;
 }

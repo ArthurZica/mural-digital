@@ -16,10 +16,10 @@ export class AuthService {
 
   async login(user: User): Promise<UserToken> {
     const payload: UserPayload = {
-      id: user.matricula,
+      matricula: user.matricula,
       email: user.email,
       nome: user.nome,
-      type: user.pessoa_tipo,
+      pessoa_tipo: user.pessoa_tipo,
     };
 
     return {

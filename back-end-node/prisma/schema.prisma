@@ -8,12 +8,14 @@ datasource db {
 }
 
 model aviso {
-  idaviso             Int        @id
-  recorrente          String?    @db.Bit(1)
+  idaviso             Int        @id @default(autoincrement())
+  recorrente          Boolean?    @db.Boolean
   dtinicio            DateTime?  @db.Timestamp(6)
   dtfim               DateTime?  @db.Timestamp(6)
-  prioridade          String?    @db.Bit(1)
+  prioridade          Boolean?    @db.Boolean
+  texto               String?    @db.VarChar(255)
   fk_pessoa_matricula Int?
+  arquivo             String?    @db.VarChar(255)
   pessoa              pessoa?    @relation(fields: [fk_pessoa_matricula], references: [matricula], onDelete: Cascade, onUpdate: NoAction, map: "fk_aviso_2")
   pertence            pertence[] @ignore
 }
