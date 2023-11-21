@@ -34,5 +34,10 @@ export class AvisoController {
     if (result) {
       return res.status(201).json({ message: 'Aviso criado com sucesso!' });
     }
+    if (!result) {
+      return res
+        .status(500)
+        .json({ message: 'erro ao criar aviso tente novamente mais tarde' });
+    }
   }
 }
