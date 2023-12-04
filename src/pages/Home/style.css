@@ -1,0 +1,73 @@
+.content{
+    background-color: aliceblue;
+    width: 100%;
+}
+
+.page{
+    margin-left: 3vw;
+}
+
+.avisosContainer{
+    display: flex;
+    flex-direction: row;
+    row-gap: 10px;
+    column-gap: 5%;
+    flex-wrap: wrap;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.headerAlerts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 7vw;
+    margin-bottom: 2vh;
+}
+
+.filterTurma{
+    width: 20vw;
+    height: 5vh;
+}
+
+
+.cardConfig{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-right: 2vw;
+    padding: 1vw;
+    height: 100vh;
+}
+
+.form{
+    display: flex;
+    flex-direction: row; 
+    row-gap: 2vh;
+    margin-left: 2vw;
+}
+
+.formUser{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vh !important;
+    margin-left: 2vw ;
+}
+
+
+.formOtherProps{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 2vw;
+}
+
+.textArea{
+    min-height: 20vh;
+}
