@@ -48,7 +48,8 @@ const AlertsPage = ({ user }) => {
   const getAvisoById = async () => {
     try {
       const response = await api.get(`${apiUrl}/aviso/turma?id=${filterTurma}`);
-      const sortedAvisos = avisos.sort((a, b) => {
+      console.log(response);
+      const sortedAvisos = response.data.retorno.sort((a, b) => {
         // First, sort by priority (true comes first)
         if (a.prioridade && !b.prioridade) {
           return -1;

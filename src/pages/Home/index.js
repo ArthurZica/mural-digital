@@ -13,6 +13,8 @@ import AlertsPage from "../../components/alerts/alertsPage";
 import { useEffect, useState } from "react";
 import ConfigAlerts from "../../components/configAlerts";
 import CreateUsers from "../../components/createUsers";
+import TableUsers from "../../components/tableUsers";
+import CreateTurma from "../../components/class";
 
 export default function Home() {
   const { user, signout } = useAuth();
@@ -96,6 +98,10 @@ export default function Home() {
           {page === "configUsers" && (
             <CreateUsers className="alerts" user={user} />
           )}
+          {page === "viewUsers" && (
+            <TableUsers className="alerts" user={user} />
+          )}
+          {page === "configClass" && <CreateTurma className="alerts" />}
         </div>
       </div>
     </div>
